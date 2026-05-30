@@ -1,9 +1,24 @@
 export const registerUser = (req, res) => {
-  res.send("ini Controller Register User");
+  // const username = req.body.username;
+  // const password = req.body.password;
+  // const fullname = req.body.fullname;
+  // const email = req.body.email;
+
+  const { username, password, fullname, email } = req.body;
+
+  res.json({
+    message: "Register User",
+    data: {
+      username,
+      password,
+      fullname,
+      email,
+    },
+  });
 };
 
 export const loginUser = (req, res) => {
-  res.send("ini Controller Login User");
+  res.json({
+    message: "Login User",
+  });
 };
-
-
